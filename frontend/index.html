@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/gestionale/style.css">
+    <link rel="stylesheet" href="asset/css/gestionale/mobile.css">
+
+    <script type="module" src="asset/js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Gestionale Ordini</h1>
+        <div class="flex-container" id="dataForm" action="/submit" method="POST">
+            <input type="text" id="order" name="order" placeholder="Inserisci l'ordine">
+            <div id="peso-container">
+                <input type="number" id="quantita" name="quantita" min="0" max="100" placeholder="Q.ta:" />
+                <select id="peso" name="peso">
+                    <option value="Peso" selected="selected" disabled>Peso</option>
+                    <option value="kg">Kg.</option>
+                    <option value="pz">Pz.</option>
+                    <option value="cest.">Cest.</option>
+                    <option value="cassa">Casse</option>
+                    <option value="conf">Conf.</option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <select id="date" name="date">
+                <option selected="selected" value="21-12-2024">21/12/2024</option>
+                <option value="22-12-2024">22/12/2024</option>
+                <option value="23-12-2024">23/12/2024</option>
+                <option value="24-12-2024">24/12/2024</option>
+            </select>
+            <button id="addBtn" type="submit">Aggiungi</button>
+        </div>
+    </div>
+
+    <main id="root"></main>
+
+</body>
+</html>
